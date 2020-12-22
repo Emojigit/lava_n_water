@@ -20,8 +20,8 @@ amst_def.on_place = function(itemstack, placer, pointed_thing)
 	minetest.item_place(itemstack, placer, pointed_thing)
 	return itemstack
 end
-print(type(amst_def))
-print(dump(amst_def))
+-- print(type(amst_def))
+-- print(dump(amst_def))
 minetest.register_node("lava_n_water:lava_water_aftermath_stone",amst_def)
 
 

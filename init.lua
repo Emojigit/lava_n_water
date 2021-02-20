@@ -15,6 +15,7 @@ end
 local amst_def = shallowcopy(minetest.registered_nodes["default:stone"])
 amst_def.description = "Lava + Water = Stone"
 amst_def.groups.not_in_creative_inventory = 1
+amst_def.groups.not_blocking_trains = 1
 amst_def.on_place = function(itemstack, placer, pointed_thing)
 	itemstack:set_name("default:stone")
 	minetest.item_place(itemstack, placer, pointed_thing)

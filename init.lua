@@ -4,7 +4,7 @@ function shallowcopy(orig)
     if orig_type == 'table' then
         copy = {}
         for orig_key, orig_value in pairs(orig) do
-            copy[orig_key] = orig_value
+            copy[shallowcopy(orig_key)] = shallowcopy(orig_value)
         end
     else -- number, string, boolean, etc
         copy = orig
